@@ -1,0 +1,9 @@
+D:\Project\Aspo\api\Aspo.Core\bin\Debug\netcoreapp3.1\Aspo.Core.deps.json
+D:\Project\Aspo\api\Aspo.Core\bin\Debug\netcoreapp3.1\Aspo.Core.dll
+D:\Project\Aspo\api\Aspo.Core\bin\Debug\netcoreapp3.1\Aspo.Core.pdb
+D:\Project\Aspo\api\Aspo.Core\obj\Debug\netcoreapp3.1\Aspo.Core.csprojAssemblyReference.cache
+D:\Project\Aspo\api\Aspo.Core\obj\Debug\netcoreapp3.1\Aspo.Core.AssemblyInfoInputs.cache
+D:\Project\Aspo\api\Aspo.Core\obj\Debug\netcoreapp3.1\Aspo.Core.AssemblyInfo.cs
+D:\Project\Aspo\api\Aspo.Core\obj\Debug\netcoreapp3.1\Aspo.Core.csproj.CoreCompileInputs.cache
+D:\Project\Aspo\api\Aspo.Core\obj\Debug\netcoreapp3.1\Aspo.Core.dll
+D:\Project\Aspo\api\Aspo.Core\obj\Debug\netcoreapp3.1\Aspo.Core.pdb

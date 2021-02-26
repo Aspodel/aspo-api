@@ -1,0 +1,14 @@
+D:\Project\Aspo\api\Aspo.Repository\bin\Debug\netcoreapp3.1\Aspo.Repository.deps.json
+D:\Project\Aspo\api\Aspo.Repository\bin\Debug\netcoreapp3.1\Aspo.Repository.dll
+D:\Project\Aspo\api\Aspo.Repository\bin\Debug\netcoreapp3.1\Aspo.Repository.pdb
+D:\Project\Aspo\api\Aspo.Repository\bin\Debug\netcoreapp3.1\Aspo.Contracts.dll
+D:\Project\Aspo\api\Aspo.Repository\bin\Debug\netcoreapp3.1\Aspo.Core.dll
+D:\Project\Aspo\api\Aspo.Repository\bin\Debug\netcoreapp3.1\Aspo.Contracts.pdb
+D:\Project\Aspo\api\Aspo.Repository\bin\Debug\netcoreapp3.1\Aspo.Core.pdb
+D:\Project\Aspo\api\Aspo.Repository\obj\Debug\netcoreapp3.1\Aspo.Repository.csprojAssemblyReference.cache
+D:\Project\Aspo\api\Aspo.Repository\obj\Debug\netcoreapp3.1\Aspo.Repository.AssemblyInfoInputs.cache
+D:\Project\Aspo\api\Aspo.Repository\obj\Debug\netcoreapp3.1\Aspo.Repository.AssemblyInfo.cs
+D:\Project\Aspo\api\Aspo.Repository\obj\Debug\netcoreapp3.1\Aspo.Repository.csproj.CoreCompileInputs.cache
+D:\Project\Aspo\api\Aspo.Repository\obj\Debug\netcoreapp3.1\Aspo.Repository.csproj.CopyComplete
+D:\Project\Aspo\api\Aspo.Repository\obj\Debug\netcoreapp3.1\Aspo.Repository.dll
+D:\Project\Aspo\api\Aspo.Repository\obj\Debug\netcoreapp3.1\Aspo.Repository.pdb

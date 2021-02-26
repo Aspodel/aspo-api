@@ -1,0 +1,12 @@
+D:\Project\Aspo\api\Aspo.Contracts\bin\Debug\netcoreapp3.1\Aspo.Contracts.deps.json
+D:\Project\Aspo\api\Aspo.Contracts\bin\Debug\netcoreapp3.1\Aspo.Contracts.dll
+D:\Project\Aspo\api\Aspo.Contracts\bin\Debug\netcoreapp3.1\Aspo.Contracts.pdb
+D:\Project\Aspo\api\Aspo.Contracts\bin\Debug\netcoreapp3.1\Aspo.Core.dll
+D:\Project\Aspo\api\Aspo.Contracts\bin\Debug\netcoreapp3.1\Aspo.Core.pdb
+D:\Project\Aspo\api\Aspo.Contracts\obj\Debug\netcoreapp3.1\Aspo.Contracts.csprojAssemblyReference.cache
+D:\Project\Aspo\api\Aspo.Contracts\obj\Debug\netcoreapp3.1\Aspo.Contracts.AssemblyInfoInputs.cache
+D:\Project\Aspo\api\Aspo.Contracts\obj\Debug\netcoreapp3.1\Aspo.Contracts.AssemblyInfo.cs
+D:\Project\Aspo\api\Aspo.Contracts\obj\Debug\netcoreapp3.1\Aspo.Contracts.csproj.CoreCompileInputs.cache
+D:\Project\Aspo\api\Aspo.Contracts\obj\Debug\netcoreapp3.1\Aspo.Contracts.csproj.CopyComplete
+D:\Project\Aspo\api\Aspo.Contracts\obj\Debug\netcoreapp3.1\Aspo.Contracts.dll
+D:\Project\Aspo\api\Aspo.Contracts\obj\Debug\netcoreapp3.1\Aspo.Contracts.pdb
