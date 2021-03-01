@@ -1,7 +1,11 @@
 ﻿using Aspo.Contracts;
 using Aspo.Core.Database;
+using Aspo.Repository.Extensions;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -17,11 +21,10 @@ namespace Aspo.Repository
             _dbSet = _context.Set<T>();
         }
 
-        public virtual IQueryable<T> FindAll()
-        {
-            return _dbSet.AsNoTracking();
-        }
-        public virtual async Task<T> FindByIdAsync(int id, CancellationToken cancellationToken = default)
+        public virtual IQueryable<T> FindAll(Expression<Func<T, bool>>? predicate = null)
+            => _dbSet.WhereIf(predicate != null, predicate!);
+
+        public virtual async Task<T?> FindByIdAsync(int id, CancellationToken cancellationToken = default)
         {
             var items = await _dbSet.FindAsync(id);
             return items;

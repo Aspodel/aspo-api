@@ -39,7 +39,6 @@ namespace Aspo.Api.Controllers
             {
                 UserName = model.UserName,
                 Email = model.Email,
-                CreatedAt = DateTime.UtcNow                
             };
             try
             {

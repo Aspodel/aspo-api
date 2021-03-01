@@ -7,9 +7,9 @@ namespace Aspo.Core.Entities
 {
     public class ApplicationUser : IdentityUser
     {
-        public string ProfileUrl { get; set; }
+        public string ProfileUrl { get; set; } = string.Empty;
         public bool IsActive { get; set; }
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         public Participant Participant { get; set; }
         public virtual ICollection<Conversation> Conversations { get; set; } = new HashSet<Conversation>();

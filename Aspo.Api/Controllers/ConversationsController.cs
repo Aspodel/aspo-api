@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Aspo.Core.Database;
 using Aspo.Core.Entities;
+using Aspo.Contracts;
+using AutoMapper;
+using Aspo.Api.DataObjects;
+using Microsoft.AspNetCore.Identity;
 
 namespace Aspo.Api.Controllers
 {
@@ -14,61 +18,63 @@ namespace Aspo.Api.Controllers
     [ApiController]
     public class ConversationsController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IConversationRepository _conversationRepository;
+        private readonly IMapper _mapper;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly IParticipantRepository _participantRepository;
 
-        public ConversationsController(ApplicationDbContext context)
+        public ConversationsController(IConversationRepository conversationRepository, IMapper mapper, UserManager<ApplicationUser> userManager,IParticipantRepository participantRepository)
         {
-            _context = context;
+            _conversationRepository = conversationRepository;
+            _mapper = mapper;
+            _userManager = userManager;
+            _participantRepository = participantRepository;
         }
 
         // GET: api/Conversations
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Conversation>>> GetConversations()
+        public async Task<IActionResult> GetAll(string userId)
         {
-            return await _context.Conversations.ToListAsync();
+            var conversations = await _conversationRepository.FindAll(userId).ToListAsync();
+            return Ok(conversations);
         }
 
         // GET: api/Conversations/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Conversation>> GetConversation(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            var conversation = await _context.Conversations.FindAsync(id);
+            var conversation = await _conversationRepository.FindByIdAsync(id);
 
             if (conversation == null)
             {
                 return NotFound();
             }
 
-            return conversation;
+            return Ok(_mapper.Map<ConversationDTO>(conversation));
         }
 
         // PUT: api/Conversations/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutConversation(int id, Conversation conversation)
+        public async Task<IActionResult> Update(int id, ConversationDTO dTO)
         {
-            if (id != conversation.Id)
-            {
-                return BadRequest();
-            }
+            //_context.Entry(conversation).State = EntityState.Modified;
 
-            _context.Entry(conversation).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ConversationExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            //try
+            //{
+            //    await _conversationRepository.SaveChangesAsync();
+            //}
+            //catch (DbUpdateConcurrencyException)
+            //{
+            //    if (!ConversationExists(id))
+            //    {
+            //        return NotFound();
+            //    }
+            //    else
+            //    {
+            //        throw;
+            //    }
+            //}
 
             return NoContent();
         }
@@ -76,33 +82,38 @@ namespace Aspo.Api.Controllers
         // POST: api/Conversations
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Conversation>> PostConversation(Conversation conversation)
+        public async Task<ActionResult<Conversation>> Create(ConversationDTO dTO)
         {
-            _context.Conversations.Add(conversation);
-            await _context.SaveChangesAsync();
+            var creator = await _userManager.FindByIdAsync(dTO.CreatorId);
+            var participant = new Participant()
+            {
+                User = creator
+            };
+            //dTO.Participants.Add(participant);
+            var conversation = _mapper.Map<Conversation>(dTO);
+            conversation.Creator = creator;
 
-            return CreatedAtAction("GetConversation", new { id = conversation.Id }, conversation);
+            _conversationRepository.Add(conversation);
+
+            await _conversationRepository.SaveChangesAsync();
+
+            return CreatedAtAction("Get", new { id = conversation.Id }, conversation);
         }
 
         // DELETE: api/Conversations/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteConversation(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var conversation = await _context.Conversations.FindAsync(id);
+            var conversation = await _conversationRepository.FindByIdAsync(id);
             if (conversation == null)
             {
                 return NotFound();
             }
 
-            _context.Conversations.Remove(conversation);
-            await _context.SaveChangesAsync();
+            _conversationRepository.Delete(conversation);
+            await _conversationRepository.SaveChangesAsync();
 
             return NoContent();
-        }
-
-        private bool ConversationExists(int id)
-        {
-            return _context.Conversations.Any(e => e.Id == id);
         }
     }
 }

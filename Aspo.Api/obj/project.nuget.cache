@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "al+15ab34SA7EiTLyI5vPAGolaLwin4pjSIdhR9X+rMH1dkX1NOcy3EGoi/F/wHKFrFKpRbglP+67+doj+/YQQ==",
+  "dgSpecHash": "XGSuqrzmBcSxwSpN9cE9PGX/gZpMCTDSrB6znorwgnuIB2y8EAgUtQphB4KgFtbxDBaKWA4wOgx0gK9GWZ9B5A==",
   "success": true,
   "projectFilePath": "D:\\Project\\Aspo\\api\\Aspo.Api\\Aspo.Api.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,8 @@
     "C:\\Users\\dattr\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.3\\microsoft.aspnetcore.cryptography.keyderivation.5.0.3.nupkg.sha512",
     "C:\\Users\\dattr\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\dattr\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\5.0.3\\microsoft.aspnetcore.identity.entityframeworkcore.5.0.3.nupkg.sha512",
+    "C:\\Users\\dattr\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.3\\microsoft.aspnetcore.jsonpatch.5.0.3.nupkg.sha512",
+    "C:\\Users\\dattr\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.3\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.3.nupkg.sha512",
     "C:\\Users\\dattr\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\dattr\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\5.0.0\\microsoft.aspnetcore.razor.language.5.0.0.nupkg.sha512",
     "C:\\Users\\dattr\\.nuget\\packages\\microsoft.aspnetcore.razor.runtime\\2.2.0\\microsoft.aspnetcore.razor.runtime.2.2.0.nupkg.sha512",
@@ -69,7 +71,8 @@
     "C:\\Users\\dattr\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\5.0.2\\microsoft.visualstudio.web.codegenerators.mvc.5.0.2.nupkg.sha512",
     "C:\\Users\\dattr\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\dattr\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Users\\dattr\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\dattr\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\dattr\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\dattr\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\dattr\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.4\\sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
     "C:\\Users\\dattr\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
